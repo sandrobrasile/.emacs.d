@@ -21,14 +21,29 @@
 (setq custom-file "~/.emacs-custom.el")
 (if (file-exists-p custom-file)(load custom-file) nil )
 
+;; Enable hl-line mode
+(global-hl-line-mode)
+
+;; linum-mode
+(global-linum-mode 1)
+
+;; Material theme
+(use-package material-theme)
+(load-theme 'material t)
+
 ;; Zenburn theme
-(use-package zenburn-theme)
-(load-theme 'zenburn t)
-;; zenburn background color is too dark
-(setq default-frame-alist
-      (append default-frame-alist
-              '((background-color . "color-241")
-                )))
+;; (use-package zenburn-theme)
+;; (load-theme 'zenburn t)
+;; ;; zenburn background color is too dark
+;; (setq default-frame-alist
+;;       (append default-frame-alist
+;;               '((background-color . "color-241")
+;;                 )))
+
+;;(set-face-background hl-line-face "color-239")
+;;(set-face-background 'linum "color-241")
+;;(set-face-foreground 'linum "color-243")
+(setq linum-format "%4d \u2502") ; changes the format putting a space before text and a vertical line
 
 ;; More precise resizing
 (setq frame-resize-pixelwise t)
@@ -39,21 +54,11 @@
 (set-face-foreground 'show-paren-match "#ff0000") ; show red parentheses on match
 (set-face-attribute 'show-paren-match nil :weight 'extra-bold)
 
-;; Enable hl-line mode
-(global-hl-line-mode)
-(set-face-background hl-line-face "color-239")
-
 (set-face-background 'vertical-border "color-235")
 (set-face-foreground 'vertical-border (face-background 'vertical-border))
 ;; Set symbol for the border
 ;; (set-display-table-slot standard-display-table
 ;;                        'vertical-border (make-glyph-code ?│))
-
-;; linum-mode
-(global-linum-mode 1)
-(set-face-background 'linum "color-241")
-(set-face-foreground 'linum "color-243")
-(setq linum-format "%4d \u2502") ; changes the format putting a space before text and a vertical line
 
 ;; Minimalistic Emacs at startup
 (menu-bar-mode 0)
@@ -493,6 +498,9 @@
 ;; be created using google style:
 ;; clang-format -style=google -dump-config > .clang-format
 ;; In this, default indent is 2 (see 'IndentWidth' key in generated file).
+
+;; shortcut for opening man pages (using helm)
+(global-set-key  [f1] (lambda () (interactive) (helm-man-woman (current-word))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; The End
