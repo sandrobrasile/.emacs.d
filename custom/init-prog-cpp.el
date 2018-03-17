@@ -37,7 +37,6 @@
 
 ;; Package: company-irony (completion through company)
 (use-package company-irony
-  :after company
   :config
   (global-company-mode)
   ;; (optional) adds CC special commands to `company-begin-commands' in order to
@@ -58,7 +57,6 @@
 ;; Company-mode backend for C/C++ header files that works with irony-mode.
 ;; Complementary to company-irony by offering completion suggestions to header files.
 (use-package company-irony-c-headers
-  :after company-irony
   :config
   ;; Load with `irony-mode` as a grouped backend
   (eval-after-load 'company
