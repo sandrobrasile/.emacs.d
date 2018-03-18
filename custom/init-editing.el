@@ -3,6 +3,14 @@
 ;;; General settings
 ;;; Code:
 
+;; Package: ace-jump-mode
+(use-package ace-jump-mode
+  :ensure t
+  :config
+  (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
+  (define-key global-map (kbd "C-c C-c SPC") 'ace-jump-line-mode)
+  )
+
 ;; Package: multiple-cursors
 (use-package multiple-cursors)
 (global-set-key (kbd "C-c m c") 'mc/edit-lines)

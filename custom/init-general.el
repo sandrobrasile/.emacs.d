@@ -3,6 +3,9 @@
 ;;; General settings
 ;;; Code:
 
+;; Disable the bell
+(setq visible-bell 1)
+
 ;; Garbage collector settings
 (setq gc-cons-threshold 100000000)
 

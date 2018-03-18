@@ -46,7 +46,8 @@
 
 ;; Package: magit
 (use-package magit
-  :ensure t)
+  :ensure t
+  )
 
 ;; Package: cmake-mode
 (use-package cmake-mode
