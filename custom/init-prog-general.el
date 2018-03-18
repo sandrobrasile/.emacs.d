@@ -44,7 +44,11 @@
   gdb-show-main t
   )
 
-;; Package: CMake
+;; Package: magit
+(use-package magit
+  :ensure t)
+
+;; Package: cmake-mode
 (use-package cmake-mode
   :mode (("CMakeLists\\.txt\\'" . cmake-mode)
          ("\\.cmake\\'" . cmake-mode))
@@ -85,7 +89,10 @@
 (use-package yasnippet-snippets
   :config
   (yas-global-mode 1)
-  )
+  (setq yas-snippet-dirs
+        '("~/.emacs.d/snippets" ;; my personal snippets
+          ))
+)
 
 ;; Package: flycheck
 ;; on-the-fly syntax checing
