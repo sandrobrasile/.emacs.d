@@ -11,6 +11,9 @@
 
 ;; prevent indent within namespace
 (c-set-offset 'innamespace 0)
+;; prevent indent within template <>
+(c-set-offset 'template-args-cont 0)
+
 
 ;; C++-mode on file open
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
