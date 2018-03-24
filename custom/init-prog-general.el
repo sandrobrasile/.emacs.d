@@ -25,7 +25,7 @@
             ;; linum-mode
             (linum-mode 1)
             ;;... changes the format putting a space before text and a vertical line
-            (setq linum-format "%4d \u2502")
+            (setq linum-format "%4d\u2502")
             ;; hs minor mode, useful for folding and hiding block of text
             ;;... C-c @ C-c   Toggle hiding/showing of a block
             ;;... C-c @ C-h   Select current block at point and hide it
@@ -42,6 +42,14 @@
   gdb-many-windows t
   ;; Non-nil means display source file containing the main routine at startup
   gdb-show-main t
+  )
+
+;; Package: git-gutter-fringe+
+(use-package git-gutter-fringe+
+  :ensure t
+  :config
+  (global-git-gutter-mode +1)
+  (git-gutter:linum-setup)
   )
 
 ;; Package: magit

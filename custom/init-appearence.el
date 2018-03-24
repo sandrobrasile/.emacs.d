@@ -10,7 +10,7 @@
   (zenburn-with-color-variables
     (custom-theme-set-faces
      'zenburn
-     `(region ((t (:background ,zenburn-bg+3))(t :inverse-video t)))
+     `(region ((t (:background ,zenburn-bg+2))(t :inverse-video t)))
      )))
 
 ;; Paren mode colors

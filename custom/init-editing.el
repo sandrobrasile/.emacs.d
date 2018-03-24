@@ -11,11 +11,11 @@
   (define-key global-map (kbd "C-c C-c SPC") 'ace-jump-line-mode)
   )
 
-;; Package: multiple-cursors
+;; package: multiple-cursors
 (use-package multiple-cursors)
 (global-set-key (kbd "C-c m c") 'mc/edit-lines)
 
-;; Package: undo-tree
+;; package: undo-tree
 (use-package undo-tree
   :init
   ;; turn it on everywhere
