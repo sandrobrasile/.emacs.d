@@ -26,5 +26,7 @@
 (setq custom-file "~/.emacs-custom.el")
 (if (file-exists-p custom-file)(load custom-file) nil )
 
+(use-package org)
+
 (provide 'init)
 ;;; init.el ends here

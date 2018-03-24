@@ -3,21 +3,15 @@
 ;;; General settings
 ;;; Code:
 
-;; Material theme
-(use-package material-theme)
-(load-theme 'material t)
-
 ;; Zenburn theme
-;; (use-package zenburn-theme)
-;; (load-theme 'zenburn t)
-;; ;; zenburn background color is too dark
-;; (setq default-frame-alist
-;;       (append default-frame-alist
-;;               '((background-color . "color-241")
-;;                 )))
-;;(set-face-background hl-line-face "color-239")
-;;(set-face-background 'linum "color-241")
-;;(set-face-foreground 'linum "color-243")
+(use-package zenburn-theme)
+(load-theme 'zenburn t)
+(with-eval-after-load "zenburn-theme"
+  (zenburn-with-color-variables
+    (custom-theme-set-faces
+     'zenburn
+     `(region ((t (:background ,zenburn-bg+3))(t :inverse-video t)))
+     )))
 
 ;; Paren mode colors
 (use-package paren)
