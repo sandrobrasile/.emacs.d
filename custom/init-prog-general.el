@@ -44,12 +44,11 @@
   gdb-show-main t
   )
 
-;; Package: git-gutter-fringe+
+;;  Package: git-gutter-fringe+
 (use-package git-gutter-fringe+
   :ensure t
   :config
-  (global-git-gutter-mode +1)
-  (git-gutter:linum-setup)
+  (global-git-gutter+-mode +1)
   )
 
 ;; Package: magit
