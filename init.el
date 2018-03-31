@@ -27,6 +27,18 @@
 (if (file-exists-p custom-file)(load custom-file) nil )
 
 (use-package org)
+(use-package graphviz-dot-mode)
+(setq org-src-fontify-natively t)
+;; List of languages that may be evaluated in Org documents
+(setq org-babel-load-languages
+      '((emacs-lisp . t)
+        (python .t)
+        (plantuml . t)
+        (dot . t)))
+(org-babel-do-load-languages 'org-babel-load-languages
+                             org-babel-load-languages)
+
+(add-to-list 'org-src-lang-modes (quote ("dot" . graphviz-dot)))
 
 (provide 'init)
 ;;; init.el ends here
