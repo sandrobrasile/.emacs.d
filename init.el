@@ -40,5 +40,11 @@
 
 (add-to-list 'org-src-lang-modes (quote ("dot" . graphviz-dot)))
 
+;; To see key stroke suggestions in the minibuffer
+(use-package which-key
+  :config
+  (which-key-mode)
+  )
+
 (provide 'init)
 ;;; init.el ends here
