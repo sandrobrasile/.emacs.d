@@ -71,6 +71,7 @@
   ;; It is advisable to create a .projectile file in the root dir of the project
   ;; See https://github.com/bbatsov/projectile
   ;;     https://github.com/ericdanan/counsel-projectile
+  (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
   )
 
 ;; Package: whitespace
@@ -98,7 +99,7 @@
   :config
   (yas-global-mode 1)
   (setq yas-snippet-dirs
-        '("~/.emacs.d/snippets" ;; my personal snippets
+        '("~/.emacs.d/snipppets" ;; my personal snippets
           ))
 )
 
