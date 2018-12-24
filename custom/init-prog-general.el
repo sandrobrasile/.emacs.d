@@ -99,7 +99,7 @@
   :config
   (yas-global-mode 1)
   (setq yas-snippet-dirs
-        '("~/.emacs.d/snipppets" ;; my personal snippets
+        '("~/.emacs.d/snippets" ;; my personal snippets
           ))
 )
 
